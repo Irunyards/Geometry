@@ -76,27 +76,6 @@ void TTriangle::draw(sf::RenderWindow& window) const {
     window.draw(triangle);
 }
 
-// void TTriangle::move(double alpha, double distance, bool isRadian) {
-//     double moveX = distance * std::cos(isRadian ? alpha : alpha * PI / 180.0);
-//     double moveY = distance * std::sin(isRadian ? alpha : alpha * PI / 180.0);
-//     P1.X += moveX; P1.Y += moveY;
-//     P2.X += moveX; P2.Y += moveY;
-//     P3.X += moveX; P3.Y += moveY;
-// }
-
-// void TTriangle::rotate(TPoint rotationPoint, double alpha, bool clockwise) {
-//     double radAlpha = clockwise ? -1 * (isRadian ? alpha : alpha * PI / 180.0) : (isRadian ? alpha : alpha * PI / 180.0);
-//     auto rotate_point = [&](TPoint& p) {
-//         double translatedX = p.X - rotationPoint.X;
-//         double translatedY = p.Y - rotationPoint.Y;
-//         p.X = rotationPoint.X + (translatedX * std::cos(radAlpha) - translatedY * std::sin(radAlpha));
-//         p.Y = rotationPoint.Y + (translatedX * std::sin(radAlpha) + translatedY * std::cos(radAlpha));
-//     };
-//     rotate_point(P1);
-//     rotate_point(P2);
-//     rotate_point(P3);
-// }
-
 double TTriangle::area() const {
     return 0.5 * std::abs(P1.X * (P2.Y - P3.Y) + P2.X * (P3.Y - P1.Y) + P3.X * (P1.Y - P2.Y));
 }
